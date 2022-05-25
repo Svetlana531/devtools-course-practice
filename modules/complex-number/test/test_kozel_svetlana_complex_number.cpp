@@ -56,12 +56,11 @@ TEST(Complex_Number_Tests, multiply) {
 
 TEST(Complex_Number_Tests, division) {
     ComplexNumber z1(1, 1);
-    ComplexNumber z2(1, 2);
+    ComplexNumber z2(1, 1);
 
     ComplexNumber z3 = z1 / z2;
 
-    ASSERT_EQ(z3.getRe(), 0.6);
-    ASSERT_EQ(z3.getIm(), -0.2);
+    ASSERT_EQ(z3.getRe(), 1);
 }
 
 TEST(Complex_Number_Tests, compare) {
