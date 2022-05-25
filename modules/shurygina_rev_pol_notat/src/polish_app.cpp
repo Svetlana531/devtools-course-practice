@@ -13,14 +13,16 @@ std::string Application::operator()(int argc, const char* argv[]) {
   if (argc == 1 || argc > 2) {
     return this->help(argv[0]);
   }
+  PolishNotation l1;
+  TQueue<Lexem*>* lex = new TQueue<Lexem*>;
   std::string output {};
+  std::string str;
   if (argc == 2) {
-    PolishNotation l1;
-    TQueue<Lexem*>* lex = new TQueue<Lexem*>;
-    std::string str = std::to_string(argv[1]);
+    str = std::to_string(argv[1]);
     lex = l1.separatExpressionOnLexems(str);
     output = l1.revPolNot(lex);
   }
+  delete lex;
   return output;
 }
 
