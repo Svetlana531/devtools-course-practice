@@ -14,7 +14,7 @@ std::string Application::operator()(int argc, const char* argv[]) {
     return this->help(argv[0]);
   }
   std::string output {};
-  if(argc == 2) {
+  if (argc == 2) {
     PolishNotation l1;
     TQueue<Lexem*>* lex = new TQueue<Lexem*>;
     std::string str = argv[1];
