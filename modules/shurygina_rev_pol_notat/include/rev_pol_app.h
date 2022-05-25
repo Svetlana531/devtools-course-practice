@@ -7,9 +7,9 @@
 
 class Application {
  public:
-  std::string operator()(int argc, const char* argv[]);
+     std::string operator()(int argc, const char* argv[]);
  private:
-  static inline std::string help(const char* appname);
+     static inline std::string help(const char* appname);
 };
 
 #endif  //  MODULES_SHURYGINA_REV_POL_NOTAT_INCLUDE_REV_POL_APP_H_
