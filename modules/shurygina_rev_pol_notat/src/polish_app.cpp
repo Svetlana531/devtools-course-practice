@@ -17,7 +17,7 @@ std::string Application::operator()(int argc, const char* argv[]) {
   if (argc == 2) {
     PolishNotation l1;
     TQueue<Lexem*>* lex = new TQueue<Lexem*>;
-    std::string str = argv[1];
+    std::string str = std::to_string(argv[1]);
     lex = l1.separatExpressionOnLexems(str);
     output = l1.revPolNot(lex);
   }
