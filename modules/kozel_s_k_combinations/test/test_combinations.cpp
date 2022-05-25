@@ -8,7 +8,7 @@
 
 TEST(combinations_in_array, test1) {
     int res;
-    combinations cnm(6,4);
+    combinations cnm(6, 4);
     res = cnm.get_cnm();
     ASSERT_EQ(15, res);
 }
