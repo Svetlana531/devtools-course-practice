@@ -2,6 +2,8 @@
 
 #include "include/combinations.h"
 
+#include <vector>
+
 combinations::combinations() {
     std::vector<int> v(1, 0);
     this->n = 1;
