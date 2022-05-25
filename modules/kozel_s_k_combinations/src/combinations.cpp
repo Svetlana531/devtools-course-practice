@@ -5,10 +5,10 @@
 #include <vector>
 
 combinations::combinations() {
-    std::vector<int> v(1, 0);
+    std::vector<int> _tmp_vec(1, 0);
     this->n = 1;
     this->m = 1;
-    this->vec = v;
+    this->vec = _tmp_vec;
 }
 
 combinations::combinations(int _n, int _m) {
@@ -35,16 +35,16 @@ bool combinations::next_set() {
 }
 
 int combinations::get_cnm() {
-    int res = 0;
+    int result = 0;
     if (n >=m) {
         while (next_set()) {
-            res++;
+            result++;
         }
     } else {
         throw std::invalid_argument("N is less then M");
     }
-    res++;
-    return res;
+    result++;
+    return result;
 }
 
 combinations::~combinations() {
