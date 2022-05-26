@@ -6,6 +6,13 @@
 
 #include "include/combinations.h"
 
+TEST(combinations_in_array, test0) {
+    int res;
+    combinations cnm;
+    res = cnm.get_cnm();
+    ASSERT_EQ(1, res);
+}
+
 TEST(combinations_in_array, test1) {
     int res;
     combinations cnm(6, 4);
